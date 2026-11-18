@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TempleFit | Tienda de ropa de gimnasio en Mexicali</title>
+  <meta name="description" content="Tienda TempleFit, The Gods Force: playeras, hoodies y shorts para quienes entrenan en serio. Arma tu pedido en línea y recógelo en Plaza Sendero Mexicali.">
+  <meta name="theme-color" content="#000000">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="TempleFit | Tienda de ropa de gimnasio en Mexicali">
+  <meta property="og:description" content="Playeras, hoodies y shorts. Arma tu pedido en línea y recógelo en Plaza Sendero Mexicali.">
+  <meta property="og:image" content="img/hero.jpg">
+
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "TempleFit",
+    "slogan": "The Gods Force",
+    "description": "Tienda de ropa de gimnasio en Mexicali.",
+    "telephone": "+52 686 602 4630",
+    "email": "Templefit.official@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza Sendero Mexicali",
+      "addressLocality": "Mexicali",
+      "addressRegion": "Baja California",
+      "addressCountry": "MX"
+    },
+    "sameAs": ["https://www.facebook.com/p/TempleFit-61586307567596/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <p class="topbar">Arma tu pedido aquí <span aria-hidden="true">·</span> Recógelo en Plaza Sendero Mexicali</p>
+
+  <header class="header" id="inicio">
+    <div class="wrap header__in">
+      <a class="logo" href="#inicio" aria-label="TempleFit, inicio">
+        <img src="img/logo.png" alt="" width="40" height="40">
+        <span>TempleFit</span>
+      </a>
+
+      <nav class="nav" id="menu" aria-label="Principal">
+        <a href="#tienda">Tienda</a>
+        <a href="#comprar">Cómo comprar</a>
+        <a href="#marca">La marca</a>
+        <a href="#ubicacion">Ubicación</a>
+      </nav>
+
+      <div class="header__tools">
+        <button class="bag" type="button" data-abrir-carrito aria-label="Abrir carrito">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 8V7a3 3 0 0 1 6 0v1"/></svg>
+          <span class="bag__n" data-carrito-n hidden>0</span>
+        </button>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section class="hero">
+      <div class="hero__media">
+        <img src="img/shorts.jpg" alt="Dos hombres caminando con playeras negras y shorts TempleFit" width="885" height="1200">
+        <img src="img/hero.jpg" alt="Dos hombres de espaldas con playeras oversize TempleFit; una lleva el estampado The Gods Force" width="1103" height="1500" fetchpriority="high">
+      </div>
+      <div class="wrap hero__content">
+        <p class="eyebrow">The Gods Force · Mexicali, B.C.</p>
+        <h1>Tu cuerpo<br>es tu templo.</h1>
+        <p class="hero__lead">Vístelo como tal. Ropa para quienes entrenan en serio, dentro y fuera del gym.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#tienda">Comprar ahora</a>
+          <a class="btn btn--ghost" href="#nuevo">Ver lo nuevo</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>TempleFit</span><span>The Gods Force</span><span>Mexicali</span><span>Est. 2025</span>
+        <span>TempleFit</span><span>The Gods Force</span><span>Mexicali</span><span>Est. 2025</span>
+        <span>TempleFit</span><span>The Gods Force</span><span>Mexicali</span><span>Est. 2025</span>
+        <span>TempleFit</span><span>The Gods Force</span><span>Mexicali</span><span>Est. 2025</span>
+      </div>
+    </div>
+
+    <section class="section section--tight" aria-labelledby="categorias-titulo">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">Compra por categoría</p>
+          <h2 id="categorias-titulo">Elige tu armadura</h2>
+        </header>
+        <div class="tiles" id="categorias"></div>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="tienda">
+      <div class="wrap">
+        <header class="section__head shop__head reveal">
+          <div>
+            <p class="eyebrow">Tienda</p>
+            <h2>Toda la colección</h2>
+          </div>
+          <div class="filters" id="filtros" role="group" aria-label="Filtrar por categoría"></div>
+        </header>
+
+        <div class="grid" id="productos" aria-live="polite"></div>
+
+        <noscript>
+          <p class="notice">Para ver el catálogo y armar tu pedido necesitas activar JavaScript. También puedes <a href="https://wa.me/5216866024630?text=Hola%20TempleFit%2C%20quiero%20informaci%C3%B3n%20de%20su%20ropa">pedir por WhatsApp</a>.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- Producto destacado (lo rellena script.js con `destacado` de productos.js) -->
+    <section class="feature" id="nuevo" aria-labelledby="nuevo-nombre" hidden>
+      <div class="feature__media"><img id="nuevo-img" src="" alt="" loading="lazy"></div>
+      <div class="feature__body reveal">
+        <p class="eyebrow">Lo nuevo</p>
+        <h2 id="nuevo-nombre"></h2>
+        <p class="feature__desc" id="nuevo-desc"></p>
+        <p class="feature__color">Color: <strong id="nuevo-color"></strong></p>
+        <div class="swatches swatches--lg" id="nuevo-colores" role="group" aria-label="Colores"></div>
+        <button class="btn" type="button" id="nuevo-ver">Elegir talla</button>
+      </div>
+    </section>
+
+    <!-- Lookbook (fotos y prendas en `looks` de productos.js) -->
+    <section class="section" id="looks" aria-labelledby="looks-titulo">
+      <div class="wrap">
+        <header class="section__head rail__head reveal">
+          <div>
+            <p class="eyebrow">Lookbook</p>
+            <h2 id="looks-titulo">Así se lleva</h2>
+          </div>
+          <div class="rail__nav">
+            <button class="x x--static" type="button" data-rail="-1" aria-label="Fotos anteriores">‹</button>
+            <button class="x x--static" type="button" data-rail="1" aria-label="Fotos siguientes">›</button>
+          </div>
+        </header>
+      </div>
+      <div class="rail" id="lookbook" tabindex="0" role="group" aria-label="Fotos de la colección"></div>
+    </section>
+
+    <section class="section section--alt" id="comprar">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">Cómo comprar</p>
+          <h2>Tres pasos, cero complicaciones</h2>
+        </header>
+        <ol class="steps reveal">
+          <li class="step">
+            <span class="step__n">01</span>
+            <h3>Elige tus prendas</h3>
+            <p>Escoge color y talla, y agrégalas al carrito.</p>
+          </li>
+          <li class="step">
+            <span class="step__n">02</span>
+            <h3>Envía tu pedido</h3>
+            <p>Con un toque nos llega tu lista por WhatsApp. Todavía no pagas nada.</p>
+          </li>
+          <li class="step">
+            <span class="step__n">03</span>
+            <h3>Recoge y estrena</h3>
+            <p>Te confirmamos disponibilidad y acordamos pago y entrega. Recoge en Plaza Sendero Mexicali.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="marca">
+      <div class="wrap">
+        <div class="manifesto reveal">
+          <p class="eyebrow">La marca</p>
+          <h2>Disciplina que se nota</h2>
+          <p class="lead">TempleFit nace en Mexicali con una idea simple: tu cuerpo es el templo que construyes todos los días, y merece ropa a la altura de ese esfuerzo.</p>
+        </div>
+        <ul class="pillars reveal">
+          <li>
+            <span class="pillars__n">01</span>
+            <h3>Pensada para entrenar</h3>
+            <p>Cortes hechos para moverte sin estorbos.</p>
+          </li>
+          <li>
+            <span class="pillars__n">02</span>
+            <h3>Estilo dentro y fuera</h3>
+            <p>Prendas que se ven bien en el gym y en la calle.</p>
+          </li>
+          <li>
+            <span class="pillars__n">03</span>
+            <h3>Orgullo local</h3>
+            <p>Una marca de Mexicali para la comunidad fitness de Mexicali.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="ubicacion">
+      <div class="wrap split split--map">
+        <div class="reveal">
+          <p class="eyebrow">Ubicación</p>
+          <h2>Plaza Sendero Mexicali</h2>
+          <ul class="contact">
+            <li>
+              <span>Tienda</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=TempleFit+Plaza+Sendero+Mexicali" target="_blank" rel="noopener">Plaza Sendero, Mexicali, Baja California</a>
+            </li>
+            <li>
+              <span>Teléfono / WhatsApp</span>
+              <a href="tel:+526866024630">+52 686 602 4630</a>
+            </li>
+            <li>
+              <span>Correo</span>
+              <a href="mailto:Templefit.official@gmail.com">Templefit.official@gmail.com</a>
+            </li>
+            <li>
+              <span>Facebook</span>
+              <a href="https://www.facebook.com/p/TempleFit-61586307567596/" target="_blank" rel="noopener">TempleFit</a>
+            </li>
+          </ul>
+        </div>
+        <div class="map reveal">
+          <iframe title="Mapa de Plaza Sendero Mexicali" src="https://www.google.com/maps?q=Plaza+Sendero+Mexicali&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap reveal">
+        <h2>¿Listo para vestir tu templo?</h2>
+        <a class="btn btn--dark" href="#tienda">Ir a la tienda</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__cols">
+      <div class="footer__brand">
+        <a class="logo" href="#inicio" aria-label="TempleFit, inicio">
+          <img src="img/logo.png" alt="" width="32" height="32">
+          <span>TempleFit</span>
+        </a>
+        <p>The Gods Force. Ropa para quienes entrenan en serio. Una marca de Mexicali.</p>
+      </div>
+      <nav aria-label="Tienda">
+        <h2>Tienda</h2>
+        <ul id="pie-categorias">
+          <li><a href="#tienda">Ver todo</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Ayuda">
+        <h2>Ayuda</h2>
+        <ul>
+          <li><a href="#comprar">Cómo comprar</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#marca">La marca</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Contacto</h2>
+        <ul>
+          <li><a href="https://wa.me/5216866024630?text=Hola%20TempleFit%2C%20quiero%20informaci%C3%B3n%20de%20su%20ropa" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:Templefit.official@gmail.com">Correo</a></li>
+          <li><a href="https://www.facebook.com/p/TempleFit-61586307567596/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer__in">
+      <p>© <span id="anio">2026</span> TempleFit · Plaza Sendero Mexicali</p>
+    </div>
+  </footer>
+
+  <a class="wa" href="https://wa.me/5216866024630?text=Hola%20TempleFit%2C%20quiero%20informaci%C3%B3n%20de%20su%20ropa" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.800c0 2.500.7 4.900 2 6.900L3 29l6.500-2c1.900 1 4.100 1.600 6.500 1.600 7.200 0 13-5.700 13-12.800S23.200 3 16 3Zm0 23.300c-2.100 0-4.100-.6-5.800-1.700l-.4-.2-3.900 1.200 1.200-3.700-.3-.4a10.300 10.300 0 0 1-1.600-5.700C5.200 10 10 5.300 16 5.300S26.800 10 26.800 15.800 22 26.300 16 26.300Zm5.900-7.800c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.2-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.200-.2-.300 0-.5.100-.7l.5-.6c.2-.2.2-.3.3-.5.100-.2.100-.4 0-.6-.1-.2-.7-1.700-1-2.300-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.4-.3.300-1.200 1.100-1.200 2.800 0 1.600 1.200 3.200 1.400 3.400.2.200 2.400 3.600 5.800 5 .8.300 1.400.5 1.900.7.8.200 1.500.200 2.100.100.6-.1 1.900-.8 2.200-1.500.3-.7.3-1.400.2-1.500-.1-.2-.3-.2-.6-.4Z"/></svg>
+  </a>
+
+  <!-- Ficha de producto (la rellena script.js) -->
+  <dialog class="modal" id="ficha" aria-labelledby="ficha-nombre">
+    <button class="x" type="button" data-cerrar aria-label="Cerrar">×</button>
+    <div class="modal__media"><img id="ficha-img" src="" alt=""></div>
+    <form class="modal__body" id="ficha-form" method="dialog">
+      <p class="eyebrow" id="ficha-categoria"></p>
+      <h2 id="ficha-nombre"></h2>
+      <p class="price price--lg" id="ficha-precio"></p>
+      <p class="modal__desc" id="ficha-desc"></p>
+
+      <fieldset class="opt">
+        <legend>Color: <strong id="ficha-color"></strong></legend>
+        <div class="thumbs" id="ficha-colores"></div>
+      </fieldset>
+
+      <fieldset class="opt">
+        <legend>Talla</legend>
+        <div class="sizes" id="ficha-tallas"></div>
+        <p class="opt__error" id="ficha-error" role="alert" hidden>Elige una talla.</p>
+        <a class="opt__help" id="ficha-duda" href="#" target="_blank" rel="noopener">¿Dudas con tu talla? Pregúntanos</a>
+      </fieldset>
+
+      <div class="modal__buy">
+        <div class="qty">
+          <button type="button" data-cant="-1" aria-label="Quitar uno">−</button>
+          <output id="ficha-cant" aria-label="Cantidad">1</output>
+          <button type="button" data-cant="1" aria-label="Agregar uno">+</button>
+        </div>
+        <button class="btn" type="submit" id="ficha-agregar">Agregar al carrito</button>
+      </div>
+      <p class="modal__note">No pagas nada hasta que confirmemos tu pedido por WhatsApp.</p>
+      <details class="acc">
+        <summary>Entrega y pago</summary>
+        <p>Recoge tu pedido en Plaza Sendero Mexicali. Te confirmamos disponibilidad por WhatsApp y ahí mismo acordamos la forma de pago.</p>
+      </details>
+      <button class="modal__share" type="button" id="ficha-compartir">Compartir esta prenda</button>
+    </form>
+  </dialog>
+
+  <!-- Carrito -->
+  <dialog class="drawer" id="carrito" aria-labelledby="carrito-titulo">
+    <header class="drawer__head">
+      <h2 id="carrito-titulo">Tu carrito <span id="carrito-cuenta"></span></h2>
+      <button class="x x--static" type="button" data-cerrar aria-label="Cerrar">×</button>
+    </header>
+    <ul class="lines" id="carrito-lineas"></ul>
+    <div class="drawer__empty" id="carrito-vacio">
+      <p>Tu carrito está vacío.</p>
+      <button class="btn btn--ghost" type="button" data-cerrar>Ver la tienda</button>
+    </div>
+    <footer class="drawer__foot" id="carrito-pie">
+      <p class="total"><span>Total</span><strong id="carrito-total"></strong></p>
+      <a class="btn btn--wa" id="carrito-enviar" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+      <p class="drawer__note">Te confirmamos disponibilidad y acordamos pago y entrega. Todavía no pagas nada.</p>
+    </footer>
+  </dialog>
+
+  <script src="productos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
